@@ -3,6 +3,7 @@ import { useState } from "react";
 export function ScoreHome(){
     
     const [numberOfPlayersSelected, setNumberOfPlayersSelected] = useState(0);
+    const [inputValue, setInputValue] = useState('');
     const [numberOfScoreSheets, setNumberOfScoreSheets] = useState(numberOfPlayersSelected);
     
     function handleNumberOfPlayersSelectedSubmit(e){
@@ -17,7 +18,7 @@ export function ScoreHome(){
             <input
                 type="number" 
                 name="numberOfPlayersSelected"
-                value={numberOfPlayersSelected}
+                value={inputValue}
                 onChange={handleNumberOfPlayersSelectedSubmit}
             />
         </label>
