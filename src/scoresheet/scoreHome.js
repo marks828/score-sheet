@@ -6,8 +6,9 @@ export function ScoreHome(){
     const [inputValue, setInputValue] = useState('');
     const [numberOfScoreSheets, setNumberOfScoreSheets] = useState(numberOfPlayersSelected);
     
-    function handleNumberOfPlayersSelectedSubmit(e){
+    function handleInputChange(e){
         e.preventDefault();
+        setInputValue(e.target.value);
         setNumberOfPlayersSelected(e.target.value);
     }
 
@@ -19,7 +20,7 @@ export function ScoreHome(){
                 type="number" 
                 name="numberOfPlayersSelected"
                 value={inputValue}
-                onChange={handleNumberOfPlayersSelectedSubmit}
+                onChange={handleInputChange}
             />
         </label>
         <h1>Scores:</h1>
