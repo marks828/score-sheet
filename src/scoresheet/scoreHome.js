@@ -13,18 +13,15 @@ export function ScoreHome(){
     
     return(
         <>
-        <form action="submit" onSubmit={handleNumberOfPlayersSelectedSubmit}>
-            <label htmlFor="numberOfPlayersSelected">Number of Players:
-                <input
-                    type="text" 
-                    name="numberOfPlayersSelected"
-                    value={numberOfPlayersSelected}
-                    onChange={setNumberOfPlayersSelected}
-                />
-            </label>
-        </form>
-        <button type="submit" 
-            onClick={()=> setNumberOfPlayersSelected(...numberOfPlayersSelected)}>Add Players</button>
+        <label htmlFor="numberOfPlayersSelected">Number of Players:
+            <input
+                type="text" 
+                name="numberOfPlayersSelected"
+                value={numberOfPlayersSelected}
+                onChange={setNumberOfPlayersSelected}
+            />
+        </label>
+        
         <h1>Scores:</h1>
         <p>{numberOfPlayersSelected}</p>
         
