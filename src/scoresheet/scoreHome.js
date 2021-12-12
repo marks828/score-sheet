@@ -1,4 +1,5 @@
 import { useState } from "react";   
+import { ScoreSheet } from "./scoreSheet";
 
 export function ScoreHome(){
     
@@ -8,7 +9,7 @@ export function ScoreHome(){
     
     function handleInputChange(e){
         e.preventDefault();
-        setInputValue(e.target.value);
+        setInputValue(parseInt(e.target.value));
         setNumberOfPlayersSelected(e.target.value);
     }
 
@@ -25,7 +26,10 @@ export function ScoreHome(){
         </label>
         <h1>Scores:</h1>
         <p>{numberOfPlayersSelected}</p>
-        
+        {/* add number of score sheets base on number put in input field */}
+        <ScoreSheet numberOfPlayersSelected={numberOfPlayersSelected}/>
+
+
         </>
     )
 }
